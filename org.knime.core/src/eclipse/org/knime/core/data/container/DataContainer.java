@@ -267,7 +267,7 @@ public class DataContainer implements RowAppender {
                 final RowContainerFactory fac = facOptional.get();
                 m_rowContainer = fac.create(repository.generateNewID(), spec, createTempFile(".knable"), rowKeys);
             } catch (IOException ex) {
-                // TODO (?)
+                ex.printStackTrace();
                 throw new RuntimeException(ex);
             }
         } else {
